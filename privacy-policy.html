@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Ark Fitness</title>
+  <link rel="stylesheet" href="ARK_FITNESS.css">
+</head>
+<body>
+  <header>
+    <div id="navbar">
+      <a id="logo" href="ARK_FITNESS.html">Ark Fitness</a>
+      <a id="login" href="Login.html">Login</a>
+      <a href="ARK_FITNESS.html">Home</a>
+      <a href="dietplan.html">Diet Plan</a>
+      <a href="privacy-policy.html">Privacy & Policy</a>
+    </div>
+  </header>
+
+  <main style="padding:60px 40px; max-width:960px; margin:0 auto; color:#e8e8f0;">
+    <h1 style="color:#ff6b35; margin-bottom:20px;">Privacy Policy</h1>
+    <p style="margin-bottom:24px; line-height:1.75; color:#cfcfe0;">Ark Fitness is committed to protecting your personal information and keeping your data safe. This Privacy Policy explains what information we collect, how we use it, and the choices you have when using our website.</p>
+
+    <section style="margin-bottom:32px;">
+      <h2 style="color:#ffffff; margin-bottom:12px;">Information We Collect</h2>
+      <p style="line-height:1.75; color:#d0d0e8;">We collect information that helps us provide and improve our services, including:</p>
+      <ul style="margin-left:20px; color:#d0d0e8; line-height:1.8;">
+        <li>Personal details you provide directly, such as name, email, and login credentials.</li>
+        <li>Usage information from your visits, such as pages viewed and interaction data.</li>
+        <li>Technical data like browser type, device, and IP address to improve site performance.</li>
+      </ul>
+    </section>
+
+    <section style="margin-bottom:32px;">
+      <h2 style="color:#ffffff; margin-bottom:12px;">How We Use Your Information</h2>
+      <p style="line-height:1.75; color:#d0d0e8;">We use the information we collect to:</p>
+      <ul style="margin-left:20px; color:#d0d0e8; line-height:1.8;">
+        <li>Deliver website content and user account support.</li>
+        <li>Personalize your experience and improve our services.</li>
+        <li>Monitor site usage, fix issues, and protect against abuse.</li>
+      </ul>
+    </section>
+
+    <section style="margin-bottom:32px;">
+      <h2 style="color:#ffffff; margin-bottom:12px;">Cookies and Tracking</h2>
+      <p style="line-height:1.75; color:#d0d0e8;">We may use cookies and similar technologies to remember your preferences, support functionality, and analyze site usage. You can control cookie settings through your browser, but some features may not work properly if cookies are disabled.</p>
+    </section>
+
+    <section style="margin-bottom:32px;">
+      <h2 style="color:#ffffff; margin-bottom:12px;">Data Security</h2>
+      <p style="line-height:1.75; color:#d0d0e8;">We take reasonable steps to protect your data. While no method is completely secure, we use industry-standard measures to safeguard your personal information.</p>
+    </section>
+
+    <section style="margin-bottom:32px;">
+      <h2 style="color:#ffffff; margin-bottom:12px;">Third-Party Links</h2>
+      <p style="line-height:1.75; color:#d0d0e8;">Our site may include links to third-party websites. These sites have their own privacy practices, and we are not responsible for their content or policies.</p>
+    </section>
+
+    <section style="margin-bottom:32px;">
+      <h2 style="color:#ffffff; margin-bottom:12px;">Your Choices</h2>
+      <p style="line-height:1.75; color:#d0d0e8;">You may review, update, or delete your personal information by contacting us. You can also choose not to provide certain details, although this may limit some site functionality.</p>
+    </section>
+
+    <section style="margin-bottom:32px;">
+      <h2 style="color:#ffffff; margin-bottom:12px;">Contact Us</h2>
+      <p style="line-height:1.75; color:#d0d0e8;">If you have questions about this policy, please contact Ark Fitness through our website or via the contact details below.</p>
+      <p style="line-height:1.75; color:#d0d0e8;">
+        Phone: <span id="random-phone">Loading...</span><br>
+        Email: <a id="random-email" href="#">Loading...</a>
+      </p>
+    </section>
+
+    <p style="margin-top:24px;"><a href="ARK_FITNESS.html" style="color:#ff6b35; text-decoration:none;">← Back to Home</a></p>
+  </main>
+
+  <script>
+    function getRandomPhone() {
+      const area = Math.floor(Math.random() * 900) + 100;
+      const prefix = Math.floor(Math.random() * 900) + 100;
+      const line = Math.floor(Math.random() * 9000) + 1000;
+      return `+1-${area}-${prefix}-${line}`;
+    }
+
+    function getRandomEmail() {
+      const names = ['hello', 'team', 'support', 'info', 'contact'];
+      const domains = ['arkfit.com', 'arkfitness.co', 'arkfit.club', 'fitark.net'];
+      const name = names[Math.floor(Math.random() * names.length)];
+      const number = Math.floor(Math.random() * 900) + 100;
+      const domain = domains[Math.floor(Math.random() * domains.length)];
+      return `${name}${number}@${domain}`;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const phoneEl = document.getElementById('random-phone');
+      const emailEl = document.getElementById('random-email');
+      if (phoneEl) phoneEl.textContent = getRandomPhone();
+      if (emailEl) {
+        const email = getRandomEmail();
+        emailEl.textContent = email;
+        emailEl.href = `mailto:${email}`;
+      }
+    });
+  </script>
+</body>
+</html>
